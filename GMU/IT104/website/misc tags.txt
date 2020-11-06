@@ -1,0 +1,19 @@
+Adding Video
+<div style="text-align: center;"> 
+	<iframe width="600" height="400" src="https://www.youtube.com/embed/......."> </iframe>
+</div
+
+Adding image
+<img src="imagename.jpg" align="left" alt="describe image" /> 
+<br>
+
+Adding unordered list items
+<p> Required Hardware for Autopilot Functionality: <p>
+<ul>  
+	<li> Eight Surround Cameras </li>
+	<li> Twelve Ultrasonic Sensors </li>
+	<li> Front Facing Radar </li>
+	<li> GPS Technology </li>
+	<li> Three Onboard CPUs </li>
+</ul>
+

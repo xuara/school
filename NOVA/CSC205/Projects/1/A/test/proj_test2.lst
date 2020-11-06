@@ -1,0 +1,32 @@
+     Assembly listing for: proj_test2.mas
+                Assembled: Fri Mar 03 18:53:00 EST 2017
+
+         |         ORG 100           
+100 1106 |         LOAD ONE          
+101 5000 |         INPUT            /first factor
+102 2104 |         STORE X          /store first factor
+103 1104 |         LOAD X           /load first factor
+         |                          
+104 0000 |  X      DEC 0             
+105 0000 |  Y      DEC 0             
+106 0001 |  ONE    DEC 1             
+         |                          
+         |                          /Given a positive integer N, find sqrt(N).
+         |                          /Beginning with 1, subtract successive odd integers from N, 
+         |                          /counting the number of subtractions k, 
+         |                          /until the remainder is no longer greater than zero. 
+         |                          /If the remainder becomes zero, sqrt(N) = k. 
+         |                          /If the remainder changes sign from plus to minus, (k-1) < sqrt(N) < k.
+
+Assembly successful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          ONE    |   106   | 100
+          X      |   104   | 102, 103
+          Y      |   105   | 
+         --------------------------------------------------
+
+

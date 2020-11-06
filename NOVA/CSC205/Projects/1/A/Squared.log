@@ -1,0 +1,248 @@
+Assembly successful. Mexfile=C:\Users\Michael\Desktop\Random Stuffs\School\NOVA\9 Semester (Spring 2017)\CSC 205 (Computer Organization)\Projects\1\A\Answered\Squared.mex
+Start run 1
+Testing input -20
+Cleaned test output: 400
+Expected output:     400
+Test output seems correct
+Run completed.
+Start run 2
+Testing input -19
+Cleaned test output: 361
+Expected output:     361
+Test output seems correct
+Run completed.
+Start run 3
+Testing input -18
+Cleaned test output: 324
+Expected output:     324
+Test output seems correct
+Run completed.
+Start run 4
+Testing input -17
+Cleaned test output: 289
+Expected output:     289
+Test output seems correct
+Run completed.
+Start run 5
+Testing input -16
+Cleaned test output: 256
+Expected output:     256
+Test output seems correct
+Run completed.
+Start run 6
+Testing input -15
+Cleaned test output: 225
+Expected output:     225
+Test output seems correct
+Run completed.
+Start run 7
+Testing input -14
+Cleaned test output: 196
+Expected output:     196
+Test output seems correct
+Run completed.
+Start run 8
+Testing input -13
+Cleaned test output: 169
+Expected output:     169
+Test output seems correct
+Run completed.
+Start run 9
+Testing input -12
+Cleaned test output: 144
+Expected output:     144
+Test output seems correct
+Run completed.
+Start run 10
+Testing input -11
+Cleaned test output: 121
+Expected output:     121
+Test output seems correct
+Run completed.
+Start run 11
+Testing input -10
+Cleaned test output: 100
+Expected output:     100
+Test output seems correct
+Run completed.
+Start run 12
+Testing input -9
+Cleaned test output: 81
+Expected output:     81
+Test output seems correct
+Run completed.
+Start run 13
+Testing input -8
+Cleaned test output: 64
+Expected output:     64
+Test output seems correct
+Run completed.
+Start run 14
+Testing input -7
+Cleaned test output: 49
+Expected output:     49
+Test output seems correct
+Run completed.
+Start run 15
+Testing input -6
+Cleaned test output: 36
+Expected output:     36
+Test output seems correct
+Run completed.
+Start run 16
+Testing input -5
+Cleaned test output: 25
+Expected output:     25
+Test output seems correct
+Run completed.
+Start run 17
+Testing input -4
+Cleaned test output: 16
+Expected output:     16
+Test output seems correct
+Run completed.
+Start run 18
+Testing input -3
+Cleaned test output: 9
+Expected output:     9
+Test output seems correct
+Run completed.
+Start run 19
+Testing input -2
+Cleaned test output: 4
+Expected output:     4
+Test output seems correct
+Run completed.
+Start run 20
+Testing input -1
+Cleaned test output: 1
+Expected output:     1
+Test output seems correct
+Run completed.
+Start run 21
+Testing input 0
+Cleaned test output: 0
+Expected output:     0
+Test output seems correct
+Run completed.
+Start run 22
+Testing input 1
+Cleaned test output: 1
+Expected output:     1
+Test output seems correct
+Run completed.
+Start run 23
+Testing input 2
+Cleaned test output: 4
+Expected output:     4
+Test output seems correct
+Run completed.
+Start run 24
+Testing input 3
+Cleaned test output: 9
+Expected output:     9
+Test output seems correct
+Run completed.
+Start run 25
+Testing input 4
+Cleaned test output: 16
+Expected output:     16
+Test output seems correct
+Run completed.
+Start run 26
+Testing input 5
+Cleaned test output: 25
+Expected output:     25
+Test output seems correct
+Run completed.
+Start run 27
+Testing input 6
+Cleaned test output: 36
+Expected output:     36
+Test output seems correct
+Run completed.
+Start run 28
+Testing input 7
+Cleaned test output: 49
+Expected output:     49
+Test output seems correct
+Run completed.
+Start run 29
+Testing input 8
+Cleaned test output: 64
+Expected output:     64
+Test output seems correct
+Run completed.
+Start run 30
+Testing input 9
+Cleaned test output: 81
+Expected output:     81
+Test output seems correct
+Run completed.
+Start run 31
+Testing input 10
+Cleaned test output: 100
+Expected output:     100
+Test output seems correct
+Run completed.
+Start run 32
+Testing input 11
+Cleaned test output: 121
+Expected output:     121
+Test output seems correct
+Run completed.
+Start run 33
+Testing input 12
+Cleaned test output: 144
+Expected output:     144
+Test output seems correct
+Run completed.
+Start run 34
+Testing input 13
+Cleaned test output: 169
+Expected output:     169
+Test output seems correct
+Run completed.
+Start run 35
+Testing input 14
+Cleaned test output: 196
+Expected output:     196
+Test output seems correct
+Run completed.
+Start run 36
+Testing input 15
+Cleaned test output: 225
+Expected output:     225
+Test output seems correct
+Run completed.
+Start run 37
+Testing input 16
+Cleaned test output: 256
+Expected output:     256
+Test output seems correct
+Run completed.
+Start run 38
+Testing input 17
+Cleaned test output: 289
+Expected output:     289
+Test output seems correct
+Run completed.
+Start run 39
+Testing input 18
+Cleaned test output: 324
+Expected output:     324
+Test output seems correct
+Run completed.
+Start run 40
+Testing input 19
+Cleaned test output: 361
+Expected output:     361
+Test output seems correct
+Run completed.
+Start run 41
+Testing input 20
+Cleaned test output: 400
+Expected output:     400
+Test output seems correct
+Run completed.
+Tests completed on file Squared.mex

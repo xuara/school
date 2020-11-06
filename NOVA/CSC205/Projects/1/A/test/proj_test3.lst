@@ -1,0 +1,63 @@
+     Assembly listing for: proj_test3.mas
+                Assembled: Fri Mar 17 21:43:07 EDT 2017
+
+000 5000 |         INPUT            /takes user input
+001 2011 |         STORE x          /stores input into label x
+002 2012 |         STORE y          /stores same input into label y as well
+         |                          
+         |                          /if positive
+003 1011 |  loop   LOAD x           /loads label x into AC
+004 3015 |         ADD multi        /adds multi to x
+005 2015 |         STORE multi      /stores new value to label multi
+006 1012 |         LOAD y           /loads label y into AC
+007 4014 |         SUBT one         /subtracts 1
+008 2012 |         STORE y          /stores y - 1
+         |                          
+009 1012 |         LOAD y           /load y into AC
+00A 8400 |         SKIPCOND 400     /if y = 0
+00B 9003 |         JUMP loop        /if y /= 0, go to loop
+         |                          /SKIPCOND 000 /if y < 0
+         |                          /JUMP loop2 /if y /< 0, go to loop2
+         |                          
+         |                          /if negative
+         |                          /loop2, CLEAR
+         |                          /SUBT y
+         |                          /STORE y
+         |                          
+         |                          /if 0
+         |                          /loop3
+         |                          
+00C 1015 |         LOAD multi       /loads label multi
+00D 6000 |         OUTPUT           /outputs label multi
+00E 1013 |         LOAD z           /load label z (0)
+00F 2015 |         STORE multi      /store 0 into AC - this just clears the AC so subsequent tests do not add together
+010 7000 |         HALT             /stops program
+         |                          
+011 0000 |  x      DEC 0             
+012 0000 |  y      DEC 0             
+013 0000 |  z      DEC 0             
+014 0001 |  one    DEC 1             
+015 0000 |  multi  DEC 0             
+         |                          
+         |                          / zero - -x = +x
+         |                          / zero - x = -x
+         |                          
+         |                          /skipcond 800 -> > 0
+         |                          /skipcond 400 -> = 0
+         |                          /skipcond 000 -> < 0
+
+Assembly successful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          loop   |   003   | 00B
+          multi  |   015   | 004, 005, 00C, 00F
+          one    |   014   | 007
+          x      |   011   | 001, 003
+          y      |   012   | 002, 006, 008, 009
+          z      |   013   | 00E
+         --------------------------------------------------
+
+

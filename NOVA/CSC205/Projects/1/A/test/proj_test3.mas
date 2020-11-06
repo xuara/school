@@ -1,0 +1,44 @@
+INPUT /takes user input
+STORE x /stores input into label x
+STORE y /stores same input into label y as well
+
+/if positive
+loop, LOAD x /loads label x into AC
+ADD multi /adds multi to x
+STORE multi /stores new value to label multi
+LOAD y /loads label y into AC
+SUBT one /subtracts 1
+STORE y /stores y - 1
+
+LOAD y /load y into AC
+SKIPCOND 400 /if y = 0
+JUMP loop /if y /= 0, go to loop
+/SKIPCOND 000 /if y < 0
+/JUMP loop2 /if y /< 0, go to loop2
+
+/if negative
+/loop2, CLEAR
+/SUBT y
+/STORE y
+
+/if 0
+/loop3
+
+LOAD multi /loads label multi
+OUTPUT /outputs label multi
+LOAD z /load label z (0)
+STORE multi /store 0 into AC - this just clears the AC so subsequent tests do not add together
+HALT /stops program
+
+x, Dec 0
+y, Dec 0
+z, Dec 0
+one, Dec 1
+multi, Dec 0
+
+/ zero - -x = +x
+/ zero - x = -x
+
+/skipcond 800 -> > 0
+/skipcond 400 -> = 0
+/skipcond 000 -> < 0

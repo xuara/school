@@ -1,0 +1,65 @@
+/initialization: sets all used variables to zero
+init, CLEAR
+Store x
+Store y
+Store sum
+Store count
+
+/get input, saves to a
+INPUT
+STORE a
+
+/tests whether a is positive, negative, or zero
+If, LOAD a
+SKIPCOND 800 /if a > 0
+JUMP ElseIf
+
+Then, STORE x /sets x = a
+STORE y /sets y = a
+Jump multiply
+
+ElseIf, SKIPCOND 400 /if a = 0
+JUMP Else
+/sets the sum equal to zero
+LOAD zero
+STORE sum
+JUMP FI
+
+/if a < 0
+Else, CLEAR
+/finds -a by negating a via 0 - a
+LOAD zero
+SUBT a
+STORE x /sets x = -a
+STORE y /sets y = -a
+Jump multiply
+
+/outputs final answer
+FI, LOAD sum
+Output
+Halt /terminates or restarts
+
+/multiply subroutine using subsequent addition 
+multiply, LOAD y
+STORE count /initializes count to value of y
+CLEAR
+STORE sum /initializes sum to 0
+loop, LOAD sum /sum += x
+ADD x
+STORE sum
+LOAD count /need to iterate y times, using count variable to keep track
+SUBT one
+STORE count
+LOAD count
+SKIPCOND 400 /if count = 0, no need to continue loop since that means we've iterated y times
+JUMP loop
+JUMP FI
+
+/variables
+x, Dec 0
+y, Dec 0
+count, Dec 0
+zero, Dec 0
+one, Dec 1
+sum, Dec 0
+a, Dec 0

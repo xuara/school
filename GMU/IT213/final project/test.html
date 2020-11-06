@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap - Prebuilt Layout</title>
+	  
+	  <script type="text/javascript">
+		  function stopVid(){
+			  try{document.getElementsByName('video1')[0].StopPlay();}
+			  catch(e){document.getElementById('video1').StopPlay();}
+		  }
+		  function playVid(){
+			  try{document.getElementsByName('video1')[0].Play();}
+			  catch(e){document.getElementById('video1').Play();}
+		  }
+	  </script>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap-4.1.1-dist/css/bootstrap.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+       <a class="navbar-brand" href="index.html">ABC</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+             <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+             </li>
+			  <li class="nav-item">
+                <a class="nav-link" href="offices.html">Offices</a>
+             </li>
+		     <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+             </li>
+			  <li class="nav-item">
+                <a class="nav-link" href="careers.html">Careers</a>
+             </li>
+			  <li class="nav-item">
+                <a class="nav-link" href="resources.html">Resources</a>
+             </li>
+             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                More
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   <a class="dropdown-item" href="aboutus.html">About Us</a>
+                   <a class="dropdown-item" href="contactus.html">Contact Us</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="sitemap.html">Site Map</a>
+				 </div>
+             </li>
+          </ul>
+       </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid text-center">
+       <h1 class="display-4">Test</h1>
+       <p class="lead">Easily build your page using the Bootstrap components from the Insert panel.</p>
+       <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>       
+    </div>
+	  
+	  <object name="video1" width="320" height="240">
+		  <param name="movie" value="(Michael_Kester)Project4_FlashCommercial.swf">
+		  <param name="quality" value="high">
+		  <embed id="video1" src="(Michael_Kester)Project4_FlashCommercial.swf" quality="high" width="320" height="240" type="application/x-shockwave-flash"/>
+	  </object>
+    <table border="0">
+    <tr>
+		<td><a href="#" onclick="playVid(); return false;">Play</a></td>
+		<td width="35">&nbsp;</td>
+		<td><a href="#" onclick="stopVid(); return false;">Pause</a></td>
+		</tr>
+	  </table>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="bootstrap-4.1.1-dist/js/jquery-3.2.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="bootstrap-4.1.1-dist/js/popper.min.js"></script>
+    <script src="bootstrap-4.1.1-dist/js/bootstrap.js"></script>
+  </body>
+</html>

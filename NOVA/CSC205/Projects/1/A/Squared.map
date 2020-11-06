@@ -1,0 +1,19 @@
+ -------------------
+ Symbol   | Location
+ ---------+---------
+ Else     |   012
+ ElseIf   |   00D
+ FI       |   018
+ If       |   007
+ Then     |   00A
+ a        |   02F
+ count    |   02B
+ init     |   000
+ loop     |   01F
+ multiply |   01B
+ one      |   02D
+ sum      |   02E
+ x        |   029
+ y        |   02A
+ zero     |   02C
+

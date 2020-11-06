@@ -1,0 +1,16 @@
+org 100
+Load ONE
+Input X /first factor
+Store X /store first factor
+Load X /load first factor
+
+X, Dec 0
+Y, Dec 0
+ONE, Dec 1
+
+/Given a positive integer N, find sqrt(N).
+/Beginning with 1, subtract successive odd integers from N, 
+/counting the number of subtractions k, 
+/until the remainder is no longer greater than zero. 
+/If the remainder becomes zero, sqrt(N) = k. 
+/If the remainder changes sign from plus to minus, (k-1) < sqrt(N) < k.

@@ -1,0 +1,30 @@
+ -----------------
+ Symbol | Location
+ -------+---------
+ bit0   |   053
+ bit1   |   052
+ bit2   |   051
+ bit3   |   050
+ bit4   |   04F
+ bit5   |   04E
+ bit6   |   04D
+ check0 |   025
+ check1 |   020
+ check2 |   01B
+ check3 |   016
+ check4 |   011
+ check5 |   00C
+ check6 |   007
+ count  |   04A
+ count1 |   031
+ count2 |   02C
+ diff   |   049
+ end    |   03F
+ one    |   04C
+ print0 |   03D
+ print1 |   03A
+ start  |   000
+ update |   040
+ x      |   048
+ zero   |   04B
+

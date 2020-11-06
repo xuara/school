@@ -1,0 +1,42 @@
+org 100
+
+input	/user input first integer
+Store VarA
+
+input	/user input second value
+Store VarB
+
+Jns prod	
+Load Sum
+Store answer
+
+Output
+Halt
+
+prod,	Hex 0
+
+Load VarB
+Store Ctr
+Clear
+
+Store Sum
+Loop,	Load Sum
+Add VarA
+Store Sum
+Load Ctr
+Subt One	
+Store Ctr	
+
+Skipcond 400 /If control variable <0 skip next instruction
+Jump Loop / go to loop
+Load Sum
+JumpI prod
+
+Next, Hex 0
+VarA, Dec 0
+VarB,	Dec 0
+Sum,	Dec 0
+Ctr,	Hex 0
+One,	Dec 1
+Num,	Dec 0
+answer, Dec 0	

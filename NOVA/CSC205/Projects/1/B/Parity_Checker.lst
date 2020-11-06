@@ -1,0 +1,166 @@
+     Assembly listing for: Parity_Checker.mas
+                Assembled: Mon Mar 20 02:20:00 EDT 2017
+
+         |                          /initializes variables then asks for input and stores it as x
+000 A000 |  start  CLEAR             
+001 2048 |         STORE x           
+002 2049 |         STORE diff        
+003 204A |         STORE count       
+004 5000 |         INPUT             
+005 2048 |         STORE x           
+006 6000 |         OUTPUT           /outputs decimal representation of inputted glyph
+         |                          
+         |                          /checks whether bit6 is 1 or 0
+007 1048 |  check6 LOAD x            
+008 404D |         SUBT bit6         
+009 2049 |         STORE diff        
+00A 8000 |         SKIPCOND 000      
+00B 0040 |         JNS update       /if bit6 is 1
+         |                          
+         |                          /checks whether bit5 is 1 or 0
+00C 1048 |  check5 LOAD x            
+00D 404E |         SUBT bit5         
+00E 2049 |         STORE diff        
+00F 8000 |         SKIPCOND 000      
+010 0040 |         JNS update       /if bit5 is 1
+         |                          
+         |                          /checks whether bit4 is 1 or 0
+011 1048 |  check4 LOAD x            
+012 404F |         SUBT bit4         
+013 2049 |         STORE diff        
+014 8000 |         SKIPCOND 000      
+015 0040 |         JNS update       /if bit4 is 1
+         |                          
+         |                          /checks whether bit3 is 1 or 0
+016 1048 |  check3 LOAD x            
+017 4050 |         SUBT bit3         
+018 2049 |         STORE diff        
+019 8000 |         SKIPCOND 000      
+01A 0040 |         JNS update       /if bit3 is 1
+         |                          
+         |                          /checks whether bit2 is 1 or 0
+01B 1048 |  check2 LOAD x            
+01C 4051 |         SUBT bit2         
+01D 2049 |         STORE diff        
+01E 8000 |         SKIPCOND 000      
+01F 0040 |         JNS update       /if bit2 is 1
+         |                          
+         |                          /checks whether bit1 is 1 or 0
+020 1048 |  check1 LOAD x            
+021 4052 |         SUBT bit1         
+022 2049 |         STORE diff        
+023 8000 |         SKIPCOND 000      
+024 0040 |         JNS update       /if bit1 is 1
+         |                          
+         |                          /checks whether bit0 is 1 or 0
+025 1048 |  check0 LOAD x            
+026 4053 |         SUBT bit0         
+027 2049 |         STORE diff        
+028 8000 |         SKIPCOND 000      
+029 0040 |         JNS update       /if bit0 is 1
+         |                          
+         |                          /outputs the number of 1s
+02A 104A |         LOAD count        
+02B 6000 |         OUTPUT            
+         |                          
+         |                          /to check parity, I check bits 2 and 1 of count (since: 1 <= count <= 6)
+         |                          /to see whether they are 1 or 0 and if they are 1, I clear that bit so I
+         |                          /can find the value of bit0 of count which lets me find out if it's even or odd,
+         |                          /since if bit0 is 1, parity is on; off otherwise.
+         |                          
+         |                          /checks whether bit2 of count is 1 or 0
+02C 104A |  count2 LOAD count        
+02D 4051 |         SUBT bit2         
+02E 2049 |         STORE diff        
+02F 8000 |         SKIPCOND 000      
+030 204A |         STORE count      /if bit2 of count is 1, clears that bit of count
+         |                          
+         |                          /checks whether bit1 of count is 1 or 0
+031 104A |  count1 LOAD count        
+032 4052 |         SUBT bit1         
+033 2049 |         STORE diff        
+034 8000 |         SKIPCOND 000      
+035 204A |         STORE count      /if bit1 of count is 1, clears that bit of count
+         |                          
+         |                          /if bit0 of count = 1, parity is on (and outputs 1)
+         |                          /else bit0 of count = 0, so parity is off (and outputs 0)
+036 104A |         LOAD count        
+037 8400 |         SKIPCOND 400      
+038 903A |         JUMP print1       
+039 903D |         JUMP print0       
+         |                          
+         |                          /outputs one if parity is on
+03A 104C |  print1 LOAD one          
+03B 6000 |         OUTPUT            
+03C 903F |         JUMP end         /prevents 0 from being outputted if parity is on
+         |                          
+         |                          /outputs zero if parity is off
+03D 104B |  print0 LOAD zero         
+03E 6000 |         OUTPUT            
+         |                          
+03F 9000 |  end    JUMP start       /returns to beginning for infinite loop
+         |                          
+         |                          /this subroutine saves diff to x (which clears each subsequent bit) and increments count
+         |                          /by 1. this only runs if a bit is found to equal 1
+040 0000 |  update HEX 0             
+041 1049 |         LOAD diff         
+042 2048 |         STORE x           
+043 104A |         LOAD count        
+044 304C |         ADD one           
+045 204A |         STORE count       
+046 A000 |         CLEAR            /cleans up AC
+047 C040 |         JUMPI update     /returns back to last bit checked to continue checking the rest of the bits
+         |                          
+         |                          /variables
+048 0000 |  x      DEC 0             
+049 0000 |  diff   DEC 0             
+04A 0000 |  count  DEC 0             
+04B 0000 |  zero   DEC 0            /constant value 0
+04C 0001 |  one    DEC 1            /constant value 1
+04D 0040 |  bit6   DEC 64           /in binary: 0100 0000
+04E 0020 |  bit5   DEC 32           /in binary: 0010 0000
+04F 0010 |  bit4   DEC 16           /in binary: 0001 0000
+050 0008 |  bit3   DEC 8            /in binary: 0000 1000
+051 0004 |  bit2   DEC 4            /in binary: 0000 0100
+052 0002 |  bit1   DEC 2            /in binary: 0000 0010
+053 0001 |  bit0   DEC 1            /in binary: 0000 0001
+
+Assembly successful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          bit0   |   053   | 026
+          bit1   |   052   | 021, 032
+          bit2   |   051   | 01C, 02D
+          bit3   |   050   | 017
+          bit4   |   04F   | 012
+          bit5   |   04E   | 00D
+          bit6   |   04D   | 008
+          check0 |   025   | 
+          check1 |   020   | 
+          check2 |   01B   | 
+          check3 |   016   | 
+          check4 |   011   | 
+          check5 |   00C   | 
+          check6 |   007   | 
+          count  |   04A   | 003, 02A, 02C, 030, 031, 035, 
+                 |         | 036, 043, 045
+          count1 |   031   | 
+          count2 |   02C   | 
+          diff   |   049   | 002, 009, 00E, 013, 018, 01D, 
+                 |         | 022, 027, 02E, 033, 041
+          end    |   03F   | 03C
+          one    |   04C   | 03A, 044
+          print0 |   03D   | 039
+          print1 |   03A   | 038
+          start  |   000   | 03F
+          update |   040   | 00B, 010, 015, 01A, 01F, 024, 
+                 |         | 029, 047
+          x      |   048   | 001, 005, 007, 00C, 011, 016, 
+                 |         | 01B, 020, 025, 042
+          zero   |   04B   | 03D
+         --------------------------------------------------
+
+

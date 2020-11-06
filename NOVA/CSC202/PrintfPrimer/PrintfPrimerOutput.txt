@@ -1,0 +1,84 @@
+Trying different conversion types
+
+Testing %b and %B
+myTrue = true; myFalse = FALSE
+
+Testing %s
+myString = 'This is my string!'
+
+Testing %c; %C; and %c
+a = a; b = B; D = D
+Notice how the %C capitalized 'b' but the %c didn't make the 'D' lowercase...
+
+Testing %d
+myByte = 123; myShort = 456; myInt = 789; myLong = 101112
+
+Testing %o
+seven = 7; eight = 10; nine = 11
+
+Testing %x; %x; %X; and %X
+nine = 9; ten = a; fifteen = F; sixteen = 10
+
+Testing %e and %E
+pi = 3.141593e+00; 1000 * pi = 3.141593E+03
+
+Testing %f
+e = 2.718282
+
+Testing %g; %g; %G; and %G
+e = 2.71828; 1000000 * e = 2.71828e+06; pi = 3.14159; pi / 1000000 = 3.14159E-06
+Notice how %g/%G automatically chooses scientific notation when your magnitude gets really large or really small
+
+Flags, width, and precision can be used with most conversion characters, but for the sake of brevity I'm just going to do most of these with %d
+
+Testing %20d
+fifteen = '                  15'
+
+Testing %020d
+fifteen = '00000000000000000015'
+
+Testing %-20d
+fifteen = '15                  '
+
+Testing %+20d
+fifteen = '                 +15'
+
+Testing %-+20d
+fifteen = '+15                 '
+
+Testing % d
+ fifteen = ' 15'
+-fifteen = '-15'
+Notice in the positive 15 that there is a space where the + sign could go
+
+Testing %(d
+ fifteen = '15'
+-fifteen = '(15)'
+
+Testing %d
+oneMillion = '1000000'
+
+Testing %,d
+oneMillion = '1,000,000'
+
+Testing %.2f
+pi = '3.14'
+
+Testing %.20f
+pi = '3.14159265358979300000'
+Notice that pi in Java is only valid to 15 decimal places
+In general, the double-type is only accurate for the most significant 15-16 digits
+The float-type is only accurate for the most 7-8 digits
+
+Testing %40.20f
+pi = '                  3.14159265358979300000'
+
+Testing %.3s
+myString = Thi
+
+Testing String.format()
+mySecondString = 'myString = Thi'
+
+Testing System.out.println()
+mySecondString = 'myString = Thi'
+

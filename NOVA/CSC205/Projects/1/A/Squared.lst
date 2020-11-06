@@ -1,0 +1,93 @@
+     Assembly listing for: Squared.mas
+                Assembled: Mon Mar 20 01:46:22 EDT 2017
+
+         |                              /initialization: sets all used variables to zero
+000 A000 |  init     CLEAR               
+001 2029 |           STORE x             
+002 202A |           STORE y             
+003 202E |           STORE sum           
+004 202B |           STORE count         
+         |                              
+         |                              /get input, saves to a
+005 5000 |           INPUT               
+006 202F |           STORE a             
+         |                              
+         |                              /tests whether a is positive, negative, or zero
+007 102F |  If       LOAD a              
+008 8800 |           SKIPCOND 800       /if a > 0
+009 900D |           JUMP ElseIf         
+         |                              
+00A 2029 |  Then     STORE x            /sets x = a
+00B 202A |           STORE y            /sets y = a
+00C 901B |           JUMP multiply       
+         |                              
+00D 8400 |  ElseIf   SKIPCOND 400       /if a = 0
+00E 9012 |           JUMP Else           
+         |                              /sets the sum equal to zero
+00F 102C |           LOAD zero           
+010 202E |           STORE sum           
+011 9018 |           JUMP FI             
+         |                              
+         |                              /if a < 0
+012 A000 |  Else     CLEAR               
+         |                              /finds -a by negating a via 0 - a
+013 102C |           LOAD zero           
+014 402F |           SUBT a              
+015 2029 |           STORE x            /sets x = -a
+016 202A |           STORE y            /sets y = -a
+017 901B |           JUMP multiply       
+         |                              
+         |                              /outputs final answer
+018 102E |  FI       LOAD sum            
+019 6000 |           OUTPUT              
+01A 7000 |           HALT               /terminates or restarts
+         |                              
+         |                              /multiply subroutine using subsequent addition 
+01B 102A |  multiply LOAD y              
+01C 202B |           STORE count        /initializes count to value of y
+01D A000 |           CLEAR               
+01E 202E |           STORE sum          /initializes sum to 0
+01F 102E |  loop     LOAD sum           /sum += x
+020 3029 |           ADD x               
+021 202E |           STORE sum           
+022 102B |           LOAD count         /need to iterate y times, using count variable to keep track
+023 402D |           SUBT one            
+024 202B |           STORE count         
+025 102B |           LOAD count          
+026 8400 |           SKIPCOND 400       /if count = 0, no need to continue loop since that means we've iterated y times
+027 901F |           JUMP loop           
+028 9018 |           JUMP FI             
+         |                              
+         |                              /variables
+029 0000 |  x        DEC 0               
+02A 0000 |  y        DEC 0               
+02B 0000 |  count    DEC 0               
+02C 0000 |  zero     DEC 0               
+02D 0001 |  one      DEC 1               
+02E 0000 |  sum      DEC 0               
+02F 0000 |  a        DEC 0               
+
+Assembly successful.
+
+         SYMBOL TABLE
+         ----------------------------------------------------
+          Symbol   | Defined | References 
+         ----------+---------+-------------------------------
+          Else     |   012   | 00E
+          ElseIf   |   00D   | 009
+          FI       |   018   | 011, 028
+          If       |   007   | 
+          Then     |   00A   | 
+          a        |   02F   | 006, 007, 014
+          count    |   02B   | 004, 01C, 022, 024, 025
+          init     |   000   | 
+          loop     |   01F   | 027
+          multiply |   01B   | 00C, 017
+          one      |   02D   | 023
+          sum      |   02E   | 003, 010, 018, 01E, 01F, 021
+          x        |   029   | 001, 00A, 015, 020
+          y        |   02A   | 002, 00B, 016, 01B
+          zero     |   02C   | 00F, 013
+         ----------------------------------------------------
+
+

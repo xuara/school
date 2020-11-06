@@ -1,0 +1,123 @@
+/initializes variables then asks for input and stores it as x
+start, CLEAR
+STORE x
+STORE diff
+STORE count
+INPUT
+STORE x
+OUTPUT /outputs decimal representation of inputted glyph
+
+/checks whether bit6 is 1 or 0
+check6, LOAD x
+SUBT bit6
+STORE diff
+SKIPCOND 000
+JNS update /if bit6 is 1
+
+/checks whether bit5 is 1 or 0
+check5, LOAD x
+SUBT bit5
+STORE diff
+SKIPCOND 000
+JNS update /if bit5 is 1
+
+/checks whether bit4 is 1 or 0
+check4, LOAD x
+SUBT bit4
+STORE diff
+SKIPCOND 000
+JNS update /if bit4 is 1
+
+/checks whether bit3 is 1 or 0
+check3, LOAD x
+SUBT bit3
+STORE diff
+SKIPCOND 000
+JNS update /if bit3 is 1
+
+/checks whether bit2 is 1 or 0
+check2, LOAD x
+SUBT bit2
+STORE diff
+SKIPCOND 000
+JNS update /if bit2 is 1
+
+/checks whether bit1 is 1 or 0
+check1, LOAD x
+SUBT bit1
+STORE diff
+SKIPCOND 000
+JNS update /if bit1 is 1
+
+/checks whether bit0 is 1 or 0
+check0, LOAD x
+SUBT bit0
+STORE diff
+SKIPCOND 000
+JNS update /if bit0 is 1
+
+/outputs the number of 1s
+LOAD count
+OUTPUT
+
+/to check parity, I check bits 2 and 1 of count (since: 1 <= count <= 6)
+/to see whether they are 1 or 0 and if they are 1, I clear that bit so I
+/can find the value of bit0 of count which lets me find out if it's even or odd,
+/since if bit0 is 1, parity is on; off otherwise.
+
+/checks whether bit2 of count is 1 or 0
+count2, LOAD count
+SUBT bit2
+STORE diff
+SKIPCOND 000
+STORE count /if bit2 of count is 1, clears that bit of count
+
+/checks whether bit1 of count is 1 or 0
+count1, LOAD count
+SUBT bit1
+STORE diff
+SKIPCOND 000
+STORE count /if bit1 of count is 1, clears that bit of count
+
+/if bit0 of count = 1, parity is on (and outputs 1)
+/else bit0 of count = 0, so parity is off (and outputs 0)
+LOAD count
+SKIPCOND 400
+JUMP print1
+JUMP print0
+
+/outputs one if parity is on
+print1, LOAD one
+OUTPUT
+JUMP end /prevents 0 from being outputted if parity is on
+
+/outputs zero if parity is off
+print0, LOAD zero
+OUTPUT
+
+end, JUMP start /returns to beginning for infinite loop
+
+/this subroutine saves diff to x (which clears each subsequent bit) and increments count
+/by 1. this only runs if a bit is found to equal 1
+update, HEX 0
+LOAD diff
+STORE x
+LOAD count
+ADD one
+STORE count
+CLEAR /cleans up AC
+JUMPI update /returns back to last bit checked to continue checking the rest of the bits
+
+/variables
+x, DEC 0
+diff, DEC 0
+count, DEC 0
+zero, DEC 0 /constant value 0
+one, DEC 1 /constant value 1
+bit6, DEC 64 /in binary: 0100 0000
+bit5, DEC 32 /in binary: 0010 0000
+bit4, DEC 16 /in binary: 0001 0000
+bit3, DEC 8 /in binary: 0000 1000
+bit2, DEC 4 /in binary: 0000 0100
+bit1, DEC 2 /in binary: 0000 0010
+bit0, DEC 1 /in binary: 0000 0001

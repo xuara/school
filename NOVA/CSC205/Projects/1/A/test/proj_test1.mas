@@ -1,0 +1,44 @@
+org 100
+Input a /first factor
+Store a /store first factor
+Input b /second factor
+Store b /store second factor
+Load a /load first factor
+Skipcond 800 /checks if number is greater than zero
+Jump End /skips to the end if zero
+load b /load second factor
+Skipcond 800 /checks if number is greater than zero
+Jump End /skips to the end if zero
+Loop, Load b /reloads second factor
+Subt One /subtracts one from the second factor
+Store b /store the new value of the second factor
+Load productAB /load the product of the two number; initially zero
+Add a /add first factor to the product
+Store productAB /store new value to product
+Load b /load second factor again
+Skipcond 400 /end loop if b is equal to 0
+Jump Loop /repeats the loop
+
+/IF, LOAD a
+/Skipcond 000
+/Store 0 - a
+
+/if (a < 0)
+ /   a = -a
+  /  neg = 1
+/if .(b < 0)
+ /   b = -b
+  /  neg ^= 1
+/productAB = a * b
+/if (neg)
+ /   productAB = -productAB
+
+Load productAB /load the value of productAB; no longer 0
+End, output /print out results
+Halt /end of program
+
+a, Dec 0
+b, Dec 0
+neg, Dec 0
+productAB, Dec 0 /product of the first two numbers
+One, Dec 1

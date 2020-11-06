@@ -1,0 +1,65 @@
+     Assembly listing for: proj_test4.mas
+                Assembled: Fri Mar 03 18:50:06 EST 2017
+
+         |         ORG 100           
+         |                          
+100 5000 |         INPUT            /user input first integer
+101 2119 |         STORE VarA        
+         |                          
+102 5000 |         INPUT            /user input second value
+103 211A |         STORE VarB        
+         |                          
+104 0109 |         JNS prod          
+105 111B |         LOAD Sum          
+106 211F |         STORE answer      
+         |                          
+107 6000 |         OUTPUT            
+108 7000 |         HALT              
+         |                          
+109 0000 |  prod   HEX 0             
+         |                          
+10A 111A |         LOAD VarB         
+10B 211C |         STORE Ctr         
+10C A000 |         CLEAR             
+         |                          
+10D 211B |         STORE Sum         
+10E 111B |  Loop   LOAD Sum          
+10F 3119 |         ADD VarA          
+110 211B |         STORE Sum         
+111 111C |         LOAD Ctr          
+112 411D |         SUBT One          
+113 211C |         STORE Ctr         
+         |                          
+114 8400 |         SKIPCOND 400     /If control variable <0 skip next instruction
+115 910E |         JUMP Loop        / go to loop
+116 111B |         LOAD Sum          
+117 C109 |         JUMPI prod        
+         |                          
+118 0000 |  Next   HEX 0             
+119 0000 |  VarA   DEC 0             
+11A 0000 |  VarB   DEC 0             
+11B 0000 |  Sum    DEC 0             
+11C 0000 |  Ctr    HEX 0             
+11D 0001 |  One    DEC 1             
+11E 0000 |  Num    DEC 0             
+11F 0000 |  answer DEC 0             
+
+Assembly successful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          Ctr    |   11C   | 10B, 111, 113
+          Loop   |   10E   | 115
+          Next   |   118   | 
+          Num    |   11E   | 
+          One    |   11D   | 112
+          Sum    |   11B   | 105, 10D, 10E, 110, 116
+          VarA   |   119   | 101, 10F
+          VarB   |   11A   | 103, 10A
+          answer |   11F   | 106
+          prod   |   109   | 104, 117
+         --------------------------------------------------
+
+

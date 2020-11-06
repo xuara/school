@@ -1,0 +1,64 @@
+     Assembly listing for: proj_test1.mas
+                Assembled: Mon Mar 13 19:00:46 EDT 2017
+
+         |            ORG 100              
+100 5000 |            INPUT               /first factor
+101 2116 |            STORE a             /store first factor
+102 5000 |            INPUT               /second factor
+103 2117 |            STORE b             /store second factor
+104 1116 |            LOAD a              /load first factor
+105 8800 |            SKIPCOND 800        /checks if number is greater than zero
+106 9114 |            JUMP End            /skips to the end if zero
+107 1117 |            LOAD b              /load second factor
+108 8800 |            SKIPCOND 800        /checks if number is greater than zero
+109 9114 |            JUMP End            /skips to the end if zero
+10A 1117 |  Loop      LOAD b              /reloads second factor
+10B 411A |            SUBT One            /subtracts one from the second factor
+10C 2117 |            STORE b             /store the new value of the second factor
+10D 1119 |            LOAD productAB      /load the product of the two number; initially zero
+10E 3116 |            ADD a               /add first factor to the product
+10F 2119 |            STORE productAB     /store new value to product
+110 1117 |            LOAD b              /load second factor again
+111 8400 |            SKIPCOND 400        /end loop if b is equal to 0
+112 910A |            JUMP Loop           /repeats the loop
+         |                                
+         |                                /IF, LOAD a
+         |                                /Skipcond 000
+         |                                /Store 0 - a
+         |                                
+         |                                /if (a < 0)
+         |                                 /   a = -a
+         |                                  /  neg = 1
+         |                                /if .(b < 0)
+         |                                 /   b = -b
+         |                                  /  neg ^= 1
+         |                                /productAB = a * b
+         |                                /if (neg)
+         |                                 /   productAB = -productAB
+         |                                
+113 1119 |            LOAD productAB      /load the value of productAB; no longer 0
+114 6000 |  End       OUTPUT              /print out results
+115 7000 |            HALT                /end of program
+         |                                
+116 0000 |  a         DEC 0                
+117 0000 |  b         DEC 0                
+118 0000 |  neg       DEC 0                
+119 0000 |  productAB DEC 0               /product of the first two numbers
+11A 0001 |  One       DEC 1                
+
+Assembly successful.
+
+         SYMBOL TABLE
+         -----------------------------------------------------
+          Symbol    | Defined | References 
+         -----------+---------+-------------------------------
+          End       |   114   | 106, 109
+          Loop      |   10A   | 112
+          One       |   11A   | 10B
+          a         |   116   | 101, 104, 10E
+          b         |   117   | 103, 107, 10A, 10C, 110
+          neg       |   118   | 
+          productAB |   119   | 10D, 10F, 113
+         -----------------------------------------------------
+
+
