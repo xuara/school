@@ -1,7 +1,7 @@
 package fp_bankaccounttest;
 
 /**
- * @author Michael Kester
+ * @author Michael
  * @since July 7, 2015
  *
  * The purpose of this program is to test the BankAccount class and its methods.

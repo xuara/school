@@ -1,5 +1,5 @@
 package e810.pkg;
-// @author M. Kester
+// @author Michael
 
 public class TrafficLightTest {
 

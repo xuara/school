@@ -5,7 +5,7 @@ incrementMinute() - increments time by one minute
 incrementHour() - increments time by one hour
  */
 package e87.pkg;
-// @author Michael Kester
+// @author Michael
 
 public class EnhancedTime2 {
 

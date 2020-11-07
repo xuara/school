@@ -1,5 +1,5 @@
 package Calculations;
-// @author Michael Kester
+// @author Michael
 
 public class Calculator extends javax.swing.JFrame {
 

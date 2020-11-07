@@ -1,5 +1,5 @@
 package e1015.pkg;
-// @author Michael Kester
+// @author Michael
 
 public class PayableInterfaceTest {
 

@@ -1,5 +1,5 @@
 package e84.pkg;
-// @author Michael Kester
+// @author Michael
 
 public class RectangleTest {
 

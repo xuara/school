@@ -1,5 +1,5 @@
 package e810.pkg;
-// @author Michael Kester
+// @author Michael
 
 public enum TrafficLight {
     // declares constants of enum type

@@ -7,7 +7,7 @@ package ColorSelect;
 
 /**
  *
- * @author M. Kester
+ * @author Michael
  */
 public class ColorSelect extends javax.swing.JFrame {
 

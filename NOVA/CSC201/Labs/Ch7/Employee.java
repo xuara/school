@@ -1,5 +1,5 @@
 package e712.pkg;
-// @author Michael Kester
+// @author Michael
 
 public class Employee {
 

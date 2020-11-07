@@ -1,5 +1,5 @@
 package e1014.pkg;
-// @author Michael Kester
+// @author Michael
 
 public class PieceWorker extends Employee {
 

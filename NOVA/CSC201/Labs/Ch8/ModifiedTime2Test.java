@@ -2,7 +2,7 @@
 // Overloaded constructors used to initialize ModifiedTime2 objects.
 // Everything is the same as the original Fig 8.6
 package e85.pkg;
-// @author Michael Kester
+// @author Michael
 
 public class ModifiedTime2Test {
 

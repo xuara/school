@@ -1,5 +1,5 @@
 package e1012.pkg;
-// @author M. Kester
+// @author Michael
 
 public class EmployeeTest {
 

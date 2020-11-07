@@ -1,5 +1,5 @@
 package e1116.pkg;
-// @author Michael Kester
+// @author Michael
 
 public class ExceptionC extends ExceptionB {
 

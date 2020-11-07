@@ -6,7 +6,7 @@ change is visible to the clients of the class.
  */
 package e85.pkg;
 
-// @author Michael Kester
+// @author Michael
 public class ModifiedTime2 {
 
 // seconds since midnight

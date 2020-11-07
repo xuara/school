@@ -1,5 +1,5 @@
 package e1117.pkg;
-// @author Michael Kester
+// @author Michael
 
 import java.io.*;
 

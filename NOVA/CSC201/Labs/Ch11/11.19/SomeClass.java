@@ -1,5 +1,5 @@
 package e1119.pkg;
-// @author M. Kester
+// @author Michael
 
 public class SomeClass {
 

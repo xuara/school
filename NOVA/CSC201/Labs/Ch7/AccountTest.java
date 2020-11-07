@@ -1,5 +1,5 @@
 package e710.pkg;
-// @author Michael Kester
+// @author Michael
 
 /* All but the withdraw method test portion and its comments taken from figure
 7.9 in the textbook */

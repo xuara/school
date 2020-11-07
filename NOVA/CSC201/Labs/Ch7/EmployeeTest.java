@@ -1,11 +1,11 @@
 package e712.pkg;
-// @author Michael Kester
+// @author Michael
 
 public class EmployeeTest {
 
     public static void main(String[] args) {
 
-        Employee e1 = new Employee("Michael", "Kester", 1337.50);
+        Employee e1 = new Employee("Michael", "Defroit", 1337.50);
         Employee e2 = new Employee("Bob", "Smith", -800.85);
         Employee e3 = new Employee("Jane", "Doe", 1234.56);
 
