@@ -1,6 +1,6 @@
 package e422.pkg;
 
-// @author Michael Kester
+// @author Michael
 import java.util.*;
 
 public class Palindrome2 {

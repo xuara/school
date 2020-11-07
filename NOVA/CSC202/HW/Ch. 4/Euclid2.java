@@ -1,6 +1,6 @@
 package e427h.pkg;
 
-// @author Michael Kester
+// @author Michael
 import java.util.*;
 
 public class Euclid2 {

@@ -1,6 +1,6 @@
 package ch06.lists;
 
-// @author Michael Kester
+// @author Michael
 import java.util.*;
 
 public class E6_41C {

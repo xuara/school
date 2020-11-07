@@ -1,6 +1,6 @@
 package ch10;
 
-// @author Michael Kester
+// @author Michael
 import java.util.*;
 
 public class E1049 {

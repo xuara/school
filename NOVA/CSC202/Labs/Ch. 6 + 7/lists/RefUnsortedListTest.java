@@ -1,6 +1,6 @@
 package ch06.lists;
 
-// @author Michael Kester
+// @author Michael
 public class RefUnsortedListTest {
 
     public static void main(String[] args) {

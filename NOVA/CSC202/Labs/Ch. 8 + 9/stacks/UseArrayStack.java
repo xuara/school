@@ -1,6 +1,6 @@
 package ch03.stacks;
 
-// @author Michael Kester
+// @author Michael
 public class UseArrayStack {
 
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package ch05.queues;
 
-// @author Michael Kester
+// @author Michael
 public class ArrayBndQueueTest {
 
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package ch03.stacks;
 
-// @author M. Kester
+// @author Michael
 public class UseLinkedStack {
 
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
 package e421.pkg;
 
 import java.util.*;
-// @author Michael Kester
+// @author Michael
 
 public class SquareRoot {
 

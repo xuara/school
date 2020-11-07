@@ -1,6 +1,6 @@
 package e124.pkg;
 
-// @author Michael Kester
+// @author Michael
 public class ShoppingBagTest {
 
     public static void main(String[] args) {

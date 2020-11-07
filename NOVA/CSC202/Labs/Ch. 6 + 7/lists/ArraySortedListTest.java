@@ -7,7 +7,7 @@ package ch06.lists;
 
 /**
  *
- * @author M. Kester
+ * @author Michael
  */
 public class ArraySortedListTest {
 

@@ -1,6 +1,6 @@
 package e124.pkg;
 
-// @author Michael Kester
+// @author Michael
 import java.util.*;
 
 public class ShoppingBagApp {

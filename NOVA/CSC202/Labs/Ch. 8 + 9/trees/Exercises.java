@@ -1,6 +1,6 @@
 package ch08.trees;
 
-// @author Michael Kester
+// @author Michael
 import support.*;
 
 public class Exercises extends BinarySearchTree {

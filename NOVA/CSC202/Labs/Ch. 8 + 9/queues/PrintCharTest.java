@@ -1,6 +1,6 @@
 package ch05.queues;
 
-// @author Michael Kester
+// @author Michael
 public class PrintCharTest {
 
     public static void main(String[] args) {

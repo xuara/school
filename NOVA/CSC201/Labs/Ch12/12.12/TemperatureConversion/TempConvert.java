@@ -1,5 +1,5 @@
 package TemperatureConversion;
-// @author Michael Kester
+// @author Michael
 
 public class TempConvert extends javax.swing.JFrame {
     

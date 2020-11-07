@@ -1,6 +1,6 @@
 package ch05.queues;
 
-// @author Michael Kester
+// @author Michael
 public class LinkedUnbndQueueTest extends LinkedUnbndQueue {
 
     // Exercise 5.31A

@@ -1,6 +1,6 @@
 package ch05.queues;
 
-// @author Michael Kester
+// @author Michael
 import java.util.*;
 
 public class ArrayUnbndQueueTest {
